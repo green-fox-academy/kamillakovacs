@@ -2,4 +2,6 @@
 
 [Patchwork link](https://github.com/kamillakovacs/patchwork)
 
-[kamillakovacs.github.io weboldal](https://github.com/kamillakovacs/kamillakovacs.github.io)
+[kamillakovacs.github.io Git](https://github.com/kamillakovacs/kamillakovacs.github.io)
+
+[kamillakovacs.github.io weboldal](https://kamillakovacs.github.io/index.html)
