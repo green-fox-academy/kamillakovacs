@@ -2,4 +2,4 @@
 
 [Patchwork link](https://github.com/kamillakovacs/patchwork)
 
-[kamillakovacs.github.io webolder](https://github.com/kamillakovacs/kamillakovacs.github.io)
+[kamillakovacs.github.io weboldal](https://github.com/kamillakovacs/kamillakovacs.github.io)
