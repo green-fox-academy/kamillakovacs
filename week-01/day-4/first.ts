@@ -32,7 +32,7 @@ let isBonus: boolean = false;
 if (credits >= 50 && isBonus == 1 > 2) {
     c = c-2;
 } else if (credits < 50 && isBonus == 1 > 2) {
-    c++;
+    c = c-1;
 } else if (isBonus == 2 > 1) {
     c = c;
 }
@@ -87,3 +87,60 @@ for(i = 0; i < 100; i++) {
 // Create a program that writes this line 100 times:
 // "I won't cheat on the exam!"*/
 
+'use strict';
+
+let x = 2;
+
+for(x = 2; x < 501; x++) {
+    if (x % 2 == 0) {
+        console.log(x);
+    }
+}
+
+// Create a program that prints all the even numbers between 0 and 500
+
+'use strict';
+
+let number: number = 15;
+let y = 1;
+
+for(y = 1; y < 11; y++) {
+    console.log(y + ' * ' + number + ' = ' + (y*number));
+}
+
+// Create a program that
+// prints the multiplication table with number
+//
+// Example:
+// The number 15 should print:
+//
+// 1 * 15 = 15
+// 2 * 15 = 30
+// 3 * 15 = 45
+// 4 * 15 = 60
+// 5 * 15 = 75
+// 6 * 15 = 90
+// 7 * 15 = 105
+// 8 * 15 = 120
+// 9 * 15 = 135
+// 10 * 15 = 150
+
+'use strict';
+
+let z = 1;
+
+for(z = 1; z < 101; z++) {
+    console.log(z); {
+    if (z % 3 == 0) {
+        console.log('Fizz'); {
+            if (z % 5 == 0) {
+                console.log('Buzz');
+            }
+        }
+    }
+}
+
+// Write a program that prints the numbers from 1 to 100.
+// But for multiples of three print “Fizz” instead of the number
+// and for the multiples of five print “Buzz”.
+// For numbers which are multiples of both three and five print “FizzBuzz”.
