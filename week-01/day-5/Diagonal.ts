@@ -1,21 +1,21 @@
-'use strict';
-
 export{}
 
 let lineCount: number = 6;
 let columnCount: number = 5;
-let percent: string = '%';
-let print: string = ' ';
+let space1: string = '';
+let space2: string = '%  ';
+let print: string = '';
 
-for(let a = 1; a < lineCount; a++) {
-    print = '';
-        if(a == 1 || a == lineCount) {
-            for(let i: number = 0; i < columnCount; i++) {
-                columnCount '%';
-            }
-        } else {console.log(a + (a.length - 1) + a);
 
-        }
+for(let i = 1; i <= lineCount; i++) {
+    if(i == 1 || i == lineCount) {
+        let repeated = (str, num) => num === undefined? str.repeat(1): str.repeat(num);
+        console.log(repeated('%', columnCount)); 
+    } else {
+            console.log('%' + space1 + space2 + '%');
+            space1 += ' ';
+            space2 = space2.slice(0, -1);
+    }
 }
 
 

@@ -1,3 +1,5 @@
+export{}
+
 'use strict';
 
 let lineCount: number = 7;
