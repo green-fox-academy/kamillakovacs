@@ -1,6 +1,6 @@
 'use strict';
 
-let number: number = 15;
+let number: number = 20;
 let y = 1;
 
 for(y = 1; y < 11; y++) {
