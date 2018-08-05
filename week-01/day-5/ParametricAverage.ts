@@ -1,15 +1,21 @@
 'use strict';
 export{}
 
-let number1: number = 4;
-let number2: number = 7;
-let number3: number = 9;
-let number4: number = 5; 
-let numberSum: number = number1+number2+number3+number4;
+let number1: number = 5;
+let number2: number = 4;
+let number3: number = 4;
+let number4: number = 4; 
+let number5: number = 5;
+let numberSum: number = number1+number2+number3+number4+number5;
 let numberAverage: number = numberSum/number1;
+let i = 0;
 
-console.log("Sum: " + numberSum);
-console.log("Average: " + numberAverage);
+while (i < number1) {
+    console.log('Please enter a number :')
+    i++;
+}
+
+console.log("Sum: " + numberSum + ", Average: " + numberAverage);
 
 
 // Write a program that asks for a number.
