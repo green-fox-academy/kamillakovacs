@@ -5,7 +5,7 @@ const accounts: any[] = [
   { clientName: 'Vladimir', accountNumber: 43546731, balance: 5204100071.23 },
   { clientName: 'Sergei', accountNumber: 23456311, balance: 1353600.0 }
 ];
-/*
+
 function getNameAndBalance(acctNum) {
     let newList = [];
     accounts.forEach(elem => {
@@ -16,8 +16,6 @@ function getNameAndBalance(acctNum) {
     return newList;
 };
 console.log(getNameAndBalance(11234543));
-
-*/
 
 
 
