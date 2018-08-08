@@ -16,29 +16,11 @@ let hashmap = {
   3: 'say goodbye '
 };
 
- // let newMessage: string[] = array2.map(String);
-  //console.log(newMessage);
+
+console.log(hashmap[notSoCrypticMessage[1]]);
 
 
 
-function message(array1, array2) {
-  let temp = [];
-  let newList: string[] = Object.keys(array1);
-  let newListNumber = newList.map(Number);
-  console.log(newListNumber);
-  console.log(array2);
-  array2.forEach(elem => {
-    if(array2[elem] == newListNumber[elem]) {
-      temp.push(elem);
-      return temp;
-      //out.push(array1[index]);
-      //return out;
-    //};
-    
-    }
-  });
-  console.log(temp);
   console.log(out);
-};
 
-message(hashmap, notSoCrypticMessage);
+
