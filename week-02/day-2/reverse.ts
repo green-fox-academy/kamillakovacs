@@ -6,6 +6,7 @@ let array;
 
 function rev() {
     array = reversed.split('');
+    console.log(array);
     array.reverse();
     reversed = array.join('');
     return reversed;
