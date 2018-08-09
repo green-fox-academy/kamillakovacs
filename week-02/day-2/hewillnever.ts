@@ -16,11 +16,10 @@ let hashmap = {
   3: 'say goodbye '
 };
 
+for(let i = 0; i < notSoCrypticMessage.length; i++) {
+   out = out.concat(hashmap[notSoCrypticMessage[i]]);
+};
 
-console.log(hashmap[notSoCrypticMessage[1]]);
-
-
-
-  console.log(out);
+console.log(out);
 
 
