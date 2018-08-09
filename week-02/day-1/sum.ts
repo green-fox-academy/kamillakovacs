@@ -6,7 +6,7 @@ let parameter: number = 25;
 function sum(parameter: number) {
     let summary: number = 0;
     for(let i = 1; i <= parameter; i++) {
-        summary = summary +=i;
+        summary +=i;
     };
     return summary;
 }
