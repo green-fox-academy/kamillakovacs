@@ -5,13 +5,13 @@ const watchlist: string[] = [];
 let securityAlcoholLoot: number = 0;
 
 const queue: any[] = [
-  { name: 'Amanda', alcohol: 10, guns: 1 },
-  { name: 'Mark', alcohol: 0, guns: 0 },
-  { name: 'Dolores', alcohol: 0, guns: 1 },
-  { name: 'Wade', alcohol: 1, guns: 1 },
-  { name: 'Anna', alcohol: 10, guns: 0 },
-  { name: 'Rob', alcohol: 2, guns: 0 },
-  { name: 'Joerg', alcohol: 20, guns: 0 }
+    { name: 'Amanda', alcohol: 10, guns: 1 },
+    { name: 'Mark', alcohol: 0, guns: 0 },
+    { name: 'Dolores', alcohol: 0, guns: 1 },
+    { name: 'Wade', alcohol: 1, guns: 1 },
+    { name: 'Anna', alcohol: 10, guns: 0 },
+    { name: 'Rob', alcohol: 2, guns: 0 },
+    { name: 'Joerg', alcohol: 20, guns: 0 }
 ];
 
 // Queue of festivalgoers at entry
@@ -31,12 +31,12 @@ function securityCheck(list) {
         } else if (elem.guns === 0 && elem.alcohol > 0) {
             securityAlcoholLoot += elem.alcohol;
             elem.alcohol = 0;
-        } else if (elem.guns > 0 && elem.alcohol > 0) {    
+        } else if (elem.guns > 0 && elem.alcohol > 0) {
             securityAlcoholLoot += elem.alcohol;
             elem.alcohol = 0;
             elem.guns = 0;
             watchlist.push(elem.name);
-        }
+        };
     });
     console.log(list);
     console.log(watchlist);

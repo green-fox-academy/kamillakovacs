@@ -6,22 +6,22 @@ const accounts: any[] = [
   { clientName: 'Sergei', accountNumber: 23456311, balance: 1353600.0 }
 ];
 
+let newList = [];
 function getNameAndBalance(acctNum) {
-    return acctNum.filter()
-    let newList = [];
-    accounts.forEach(elem => {
-        if (acctNum === elem.accountNumber) {
-        newList.push(elem.clientName, elem.balance);
-        };
-})
-    return newList;
+   // return acctNum.map(i => {
+        return acctNum.filter(elem => {
+            acctNum === elem.accountNumber;
+            newList.push(elem.clientName, elem.balance);
+        });
+   // });
 };
+
 console.log(getNameAndBalance(11234543));
 
 
 
 function transfer(myAccount, from, to, amount) {
-    myAccount.forEach(elem=> {
+    myAccount.forEach(elem => {
     if (elem.accountNumber === from) {
         elem.balance -= amount;
     };
