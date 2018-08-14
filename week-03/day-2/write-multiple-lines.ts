@@ -7,10 +7,10 @@
 // to the file and each line should be 'apple'
 // The function should not raise any error if it could not write the file.
 
-declare function require(path:string): any;
+declare function require(path: string): any;
 
 'use strict';
-export {};
+export { };
 
 const fs = require('fs');
 const charEncoding = 'utf-8';
@@ -18,12 +18,12 @@ const charEncoding = 'utf-8';
 function huha(path: string, word: string, numero: number): void {
     try {
         fs.writeFileSync(path, word + '\n');
-        for(let i = 1; i < numero; i++) {
+        for (let i = 1; i < numero; i++) {
             fs.appendFileSync(path, word + '\n');
-        }; 
+        };
     } catch {
         return null;
     };
 };
 
-huha('myfile5.txt','apple', 5);
+huha('myfile5.txt', 'apple', 5);
