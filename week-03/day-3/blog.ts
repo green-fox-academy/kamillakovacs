@@ -1,5 +1,6 @@
 import {BlogPost} from "./domino";
 
-class Blog {
-
+class Blog extends BlogPost {
+  newBlogPost: Blog = null;
+  
 }
