@@ -11,13 +11,15 @@ let yWidth: number;
 function triangles(x, y, xWidth, yWidth) {
   ctx.beginPath();
   ctx.save();
-  ctx.moveTo(x, y);
-  ctx.lineTo(x-xWidth, y-yWidth);
-  ctx.lineTo(x+xWidth, y-yWidth);
-  ctx.lineTo(x, y);  
+  
+  ctx.translate(x, y);
+  ctx.moveTo(0, 0);
+  ctx.lineTo(0-xWidth, 0-yWidth);
+  ctx.lineTo(0+xWidth, 0-yWidth);
+  ctx.lineTo(0, 0);  
   ctx.stroke();
 
-  if(y < 300) {
+  if(y < 400) {
     ctx.restore();
     return null;
     } 
@@ -27,4 +29,4 @@ function triangles(x, y, xWidth, yWidth) {
   ctx.restore();
 };
 
-triangles(300, 580, 6, 9);
+triangles(300, 580, 4, 6);
