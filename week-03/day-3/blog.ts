@@ -1,11 +1,4 @@
-//import {BlogPost} from "./domino";
-
-class Blog  {
-  blogPost: BlogPost; 
-  
-}
-
-class BlogPost extends Blog {
+public class BlogPost {
   authorName: string;
   title: string;
   text: string;
@@ -18,3 +11,6 @@ class BlogPost extends Blog {
   }
 }
 
+public class Blog {
+  
+}
