@@ -1,8 +1,7 @@
 class Person {
-   name: string;
-   age: number;
-   gender: string;
-
+  name: string;
+  age: number;
+  gender: string;
   constructor(name: string, age: number, gender: string){
     this.name = name;
     this.age = age;
@@ -10,19 +9,21 @@ class Person {
   }
 
   introduce() {
-    console.log('Hi I\'m ${this.name}, a ${this.age} year old ${this.gender}');
+    console.log("Hi, I'm " + this.name + " a " + this.age + " year old " + this.gender + ".");
   }
 
   getGoal() {
-    console.log('My goal is: Live for the moment!');
+    console.log("My goal is: Live for the moment!");
   }
 }
 
-class Student extends Person {
+class Student {
+  name: string;
+  age: number;
+  gender: string;
   previousOrganization: string;
   skippedDays: number;
   constructor(name: string = 'Jane Doe', age: number = 30, gender: string = 'female', previousOrganization: string = "The School of Life", skippedDays: number = 0) {
-    super(name, age, gender);
     this.name = name;
     this.age = age;
     this.gender = gender;
@@ -43,10 +44,12 @@ class Student extends Person {
   }
 }
 
-class Mentor extends Person {
+class Mentor {
+  name: string;
+  age: number;
+  gender: string;
   level: string;
   constructor(name: string = 'Jane Doe', age: number = 30, gender: string = 'female', level: string = 'intermediate') {
-    super(name, age, gender);
     this.name = name;
     this.age = age;
     this.gender = gender;
@@ -62,16 +65,18 @@ class Mentor extends Person {
   }
 }
 
-class Sponsor extends Person {
+class Sponsor {
+  name: string;
+  age: number;
+  gender: string;
   company: string;
   hiredStudents: number;
-  constructor(name:string = 'Jane Doe', age: number = 30, gender: string = 'female', company = 'Google', hiredStudents = 0) {
-    super(name, age, gender);
+  constructor(name: string = 'Jane Doe', age: number = 30, gender: string = 'female', company = 'Google') {
     this.name = name;
     this.age = age;
     this.gender = gender;
     this.company = company;
-    this.hiredStudents = hiredStudents;
+    this.hiredStudents = 0;
   }
 
   introduce() {
@@ -79,7 +84,7 @@ class Sponsor extends Person {
   }
 
   hire() {
-    this.hiredStudents++;
+    this.hiredStudents = this.hiredStudents + 1;
   }
 
   getGoal() {

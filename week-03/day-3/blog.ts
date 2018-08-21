@@ -1,4 +1,4 @@
-public class BlogPost {
+class BlogPost {
   authorName: string;
   title: string;
   text: string;
@@ -11,6 +11,12 @@ public class BlogPost {
   }
 }
 
-public class Blog {
-  
+class Blog {
+  blogPost: BlogPost;
+  constructor() {
+    this.blogPost = new ArrayList<>();
+  }
+  add(blogPost: BlogPost): void {
+    blogPost.add()
+  }
 }
