@@ -1,9 +1,11 @@
+import { Carrier } from "./carrier"
+
 export class Aircraft {
-  protected type: string;
-  protected ammo: number;
-  protected maxAmmo: number;
-  protected baseDamage: number;
-  protected allDamage: number;
+  public type: string;
+  public ammo: number;
+  public maxAmmo: number;
+  public baseDamage: number;
+  public allDamage: number;
   constructor(type: string, baseDamage: number, maxAmmo: number) {
     this.type = type;
     this.ammo = 0;
@@ -23,7 +25,9 @@ export class Aircraft {
     if (this.ammo + refillAmmoAmount < this.maxAmmo) {
       return this.ammo + refillAmmoAmount;
     } else if (this.ammo + refillAmmoAmount >= this.maxAmmo) {
-      return this.ammo + refillAmmoAmount - this.maxAmmo;
+      let leftoverAmmo: number = 0;
+      leftoverAmmo = leftoverAmmo += (this.ammo + refillAmmoAmount - this.maxAmmo);
+      return leftoverAmmo;
     }
   }
 
@@ -46,5 +50,5 @@ export class Aircraft {
 
 let aircraft1: Aircraft = new Aircraft('F16', 30, 8);
 
-console.log(aircraft1.refill(300));
+aircraft1.refill(300);
 
