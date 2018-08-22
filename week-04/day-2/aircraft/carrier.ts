@@ -1,4 +1,4 @@
-import { Aircraft } from "./aircraft"
+import { Aircraft } from './aircraft'
 
 export class Carrier {
   protected ammoStore: number;
@@ -9,7 +9,6 @@ export class Carrier {
     this.healthPoint = healthPoint;
     this.aircraftStore = [];
     this.ammoStore = ammoStore;
-
   }
 
   add(Aircraft) {
@@ -18,42 +17,51 @@ export class Carrier {
 
   fill() {
     this.aircraftStore.forEach(elem => {
-      let ammoNeed: number = elem.maxAmmo -= elem.ammo
+     let aircraftAmmoNeed: number = elem.maxAmmo -= elem.ammo;
+     let totalAmmoNeed: number = aircraftAmmoNeed += elem.ammo;
+     
 
-      if (elem.ammo < elem.maxAmmo) {
-        this.ammoStore = this.ammoStore -= ammoNeed;
-        elem.ammo = elem.maxAmmo;
-        ammoNeed -= ()
+      if (elem.ammo < elem.maxAmmo && totalAmmoNeed > this.ammoStore && elem.isPriority()) {
+        this.ammoStore -= aircraftAmmoNeed;
+        elem.ammo += aircraftAmmoNeed;
+        return this.ammoStore;
+
+      } else if (elem.ammo < elem.maxAmmo && this.ammoStore > aircraftAmmoNeed) {
+        this.ammoStore -= aircraftAmmoNeed;
+        elem.ammo += aircraftAmmoNeed;
         return this.ammoStore;
 
       } else if (elem.ammo >= elem.maxAmmo) {
         return this.ammoStore;
 
-      } else if (this.ammoStore < (elem.maxAmmo -= elem.ammo)) {
-        this.ammoStore = 0;
+      } else if (this.ammoStore <= aircraftAmmoNeed) {
         throw new Error("Insufficient ammo");
-      
-      } else if (elem.isPriority) {
-        
-      }
-    })
+
+    });
+
     console.log(this.ammoStore);
+ 
   }
 
-  // fight(anotherCarrier) {
 
-  // }
 
-  // getStatus() {
+
+
+  fight(anotherCarrier) {
+
+  }
+
+  getStatus() {
     
-  // }
-}
+  }
+      
+};
 
-let newCarrier: Carrier = new Carrier(100, 20);
+let newCarrier: Carrier = new Carrier(100, 100);
 
 let aircraft1: Aircraft = new Aircraft('F35', 50, 12);
 let aircraft2: Aircraft = new Aircraft('F16', 30, 8);
-let aircraft3: Aircraft = new Aircraft('F16', 30, 8);
+let aircraft3: Aircraft = new Aircraft('F35', 50, 12);
 
 newCarrier.add(aircraft1);
 newCarrier.add(aircraft2);
