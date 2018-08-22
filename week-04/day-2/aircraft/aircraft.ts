@@ -16,14 +16,15 @@ export class Aircraft {
 
   fight() {
     this.ammo = 0;
-    this.baseDamage = this.baseDamage * this.ammo;
-    this.allDamage = this.allDamage += this.baseDamage;
+    this.baseDamage * this.ammo;
+    this.allDamage += this.baseDamage;
     return this.baseDamage;
   }
 
   refill(refillAmmoAmount: number) {
     if (this.ammo + refillAmmoAmount < this.maxAmmo) {
-      return this.ammo + refillAmmoAmount;
+      let newAmmoAmount = this.ammo + refillAmmoAmount;
+      return newAmmoAmount;
     } else if (this.ammo + refillAmmoAmount >= this.maxAmmo) {
       let leftoverAmmo: number = 0;
       leftoverAmmo = leftoverAmmo += (this.ammo + refillAmmoAmount - this.maxAmmo);
