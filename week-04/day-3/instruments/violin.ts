@@ -1,4 +1,3 @@
-import { Instrument } from "./instrument"
 import { StringedInstrument } from "./stringedinstrument"
 
 'use strict'
@@ -6,8 +5,8 @@ import { StringedInstrument } from "./stringedinstrument"
 export class Violin extends StringedInstrument {
   protected soundOfInstrument: string;
 
-  constructor(name: string,numberOfStrings: number = 4) {
-    super(name, numberOfStrings);
+  constructor(numberOfStrings: number = 4) {
+    super(numberOfStrings);
     this.name = 'violin';
     this.soundOfInstrument = 'Screech';
   }
@@ -17,6 +16,6 @@ export class Violin extends StringedInstrument {
   }
 
   play() {
-    console.log(`${this.name}, a ${this.numberOfStrings} stringed instrument that goes ${this.soundOfInstrument}`);
+    console.log(`${this.name}, a ${this.numberOfStrings}-stringed instrument that goes ${this.soundOfInstrument}`);
   }
 }
