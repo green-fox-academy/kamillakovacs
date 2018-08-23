@@ -1,4 +1,8 @@
-class Sharpie {
+'use strict'
+
+import { SharpieSet} from './sharpieset'
+
+export class Sharpie {
   color: string;
   width: number;
   inkAmount: number;
@@ -13,4 +17,9 @@ class Sharpie {
     this.inkAmount--;
     return this.inkAmount;
   }
+
+  getInkAmount() {
+    return this.inkAmount;
+  }
+
 }
