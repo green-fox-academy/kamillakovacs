@@ -13,8 +13,3 @@ export class Something {
   }
   
 }
-
-let something1: Something = new Something;
-let integerList: number[] = [1, 2, 3, 4, 5];
-
-something1.sum(integerList);
