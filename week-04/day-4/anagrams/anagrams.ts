@@ -1,8 +1,8 @@
 'use strict'
 
 export function Anagrams(string1: string, string2: string): boolean {
-  let alpha1: string = string1.split('').sort().join();
-  let alpha2: string = string2.split('').sort().join();
+  let alpha1: string[] = string1.split('').sort();
+  let alpha2: string[] = string2.split('').sort();
   let newList: string[] = [];
 
   if (alpha1.length !== alpha2.length) {

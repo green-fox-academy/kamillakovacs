@@ -1,3 +1,6 @@
+
+
+
 import { Test } from 'tape'
 import { Anagrams } from './anagrams'
 
@@ -13,5 +16,3 @@ test('anagram boolean test', (test) => {
 	test.equal(actual, expected, 'does it return true');
 	test.end();
 });
-
-
