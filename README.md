@@ -6,5 +6,5 @@
 
 [kamillakovacs.github.io weboldal](https://kamillakovacs.github.io/index.html)
 
-[ToDo App] (https://github.com/kamillakovacs/todo-app)
+[ToDo App](https://github.com/kamillakovacs/todo-app) 
 
