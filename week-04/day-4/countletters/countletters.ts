@@ -19,4 +19,4 @@ function countLetters(string1: string): any {
   return finalList;
 }
 
-console.log(countLetters(`hi my name is Kamilla`));
+console.log(countLetters(`hi my name is Anna`));
