@@ -1,7 +1,9 @@
-import { Thing } from "./thing";
-import { Fleet } from "./fleet";
+import { Fleet } from './fleet'
+import { Thing } from './thing'
+import {FleetOfThings} from './fleetofthings'
 
 let fleet: Fleet = new Fleet();
+let listOfThings: Thing[] = [];
 let milk: Thing = new Thing(`Get milk`);
 let obstacles: Thing = new Thing(`Remove the obstacles`);
 let stand: Thing = new Thing(`Stand up`);
@@ -14,14 +16,3 @@ fleet.add(lunch);
 stand.complete();
 lunch.complete();
 
-function print() {
-  things.forEach(element => {
-    if(this.things[element].complete()){
-      console.log(`${element}. [x] ${this.name}`);
-    } else {
-      console.log(`${element}. [ ] ${this.name}`);
-    }
-  }); 
-}
-
-console.log(print());

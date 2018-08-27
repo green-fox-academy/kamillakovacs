@@ -2,13 +2,12 @@ class Thing {
   protected name: string;
   protected completed: boolean;
 
-  constructor(name: string, completed: boolean){
-      this.name = name;
-      this.completed = completed;
+  constructor(name: string) {
+    this.name = name;
   }
 
   public complete() {
-      this.completed = true;
+    this.completed = true;
   }
 }
 

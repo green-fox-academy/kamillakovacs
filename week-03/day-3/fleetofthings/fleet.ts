@@ -1,15 +1,18 @@
 import { Thing } from "./thing";
 
+
 class Fleet {
-    protected things: Thing[];
+  protected things: Thing[];
 
-    constructor() {
-        this.things = [];
-    }
+  constructor() {
+    this.things = [];
+  }
 
-    add(thing: Thing) {
-        this.things.push(thing);
-    }
+  public add(thing: Thing) {
+    this.things.push(thing);
+  }
+
+  
 }
 
 export { Fleet };
