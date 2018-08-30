@@ -13,12 +13,9 @@ function readPoem() {
   let regex = /[.,\s]/g;
   let newpoem = poem1.replace(regex, ' ');
   let splitString = newpoem.split(` `)
-  for (let i: number = 0; i < splitString.length; i++) {
-    if (splitString[i].length >= 8) {
-    newArray.push(splitString[i])
-    }
-  }
-  return newArray;
+
+  let eightLetters = splitString.filter(elem => elem.length >= 8)
+  return eightLetters;
 };
 
 console.log(readPoem());
