@@ -6,6 +6,7 @@ export class Aircraft {
   public maxAmmo: number;
   public baseDamage: number;
   public allDamage: number;
+  
   constructor(type: string, baseDamage: number, maxAmmo: number) {
     this.type = type;
     this.ammo = 0;

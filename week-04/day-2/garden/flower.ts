@@ -2,7 +2,7 @@ import { Garden } from './garden'
 import { Plant } from './plant';
 
 export class Flower extends Plant {
-  protected name: string;
+  
   protected waterAmount: number;
   protected plantType: string
 

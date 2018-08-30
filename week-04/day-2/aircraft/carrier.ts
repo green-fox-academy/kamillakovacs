@@ -59,7 +59,6 @@ export class Carrier {
       console.log(`Type: ${e.type}, Ammo: ${e.ammo}, Base Damage: ${e.baseDamage}, All Damage: ${e.allDamage}`)      
     })
   }
-      
 };
 
 let newCarrier: Carrier = new Carrier(100, 50);
