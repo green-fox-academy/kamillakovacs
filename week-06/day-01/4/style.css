@@ -1,0 +1,61 @@
+.container {
+  background-color: white;
+  padding:30px;
+  border: 3px solid black;
+  border-radius: 20px;
+}
+
+.nav {
+  background-color: darkviolet;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+.blue {
+  background-color: cyan;
+}
+
+.one {
+  width: 150px;
+  height: 50px; 
+}
+
+.two {
+  width: 100px;
+  height: 50px; 
+}
+
+.three {
+  width: 120px;
+  height: 50px; 
+}
+
+/* .nav:after {
+  content: "";
+  display: block;
+  color: both;
+} */
+
+.item {
+  margin: 5px;
+}
+
+.containercontent {
+  display: flex;
+}
+
+.yellow {
+  background-color: yellow;
+  height: 500px;
+  width: 60%;
+}
+
+.green {
+  background-color:green;
+  height: 500px;
+  width: 40%;
+}
+
