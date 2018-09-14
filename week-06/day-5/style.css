@@ -1,0 +1,35 @@
+.container {
+  background-color: white;
+}
+
+.mainplusfooter {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.middle {
+  display: flex;
+}
+
+.yellow {
+  background-color: yellow;
+  height: 300px;
+  width: 70%;
+  margin: 2px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.sidebar {
+  background-color:green;
+  height: 300px;
+  width: 15%;
+  margin: 2px;
+}
+
+.footer {
+  background-color: grey;
+  height: 50px;
+  width: 100%;
+}
