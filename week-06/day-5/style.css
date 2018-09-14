@@ -2,10 +2,10 @@
   background-color: white;
 }
 
-.mainplusfooter {
+/* .mainplusfooter {
   padding-left: 50px;
   padding-right: 50px;
-}
+} */
 
 .middle {
   display: flex;
@@ -14,18 +14,17 @@
 .yellow {
   background-color: yellow;
   height: 300px;
-  width: 70%;
+  width: 90%;
   margin: 2px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
 }
 
-.sidebar {
-  background-color:green;
+.button {
+  align-self: center;
   height: 300px;
-  width: 15%;
-  margin: 2px;
+  width: 5%;
 }
 
 .footer {
