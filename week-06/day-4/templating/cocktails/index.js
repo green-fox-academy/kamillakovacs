@@ -21,11 +21,13 @@ app.set('view engine', 'ejs');
 app.use('/assets', express.static('assets'));
 
 app.get('/', (req, res) => {
+  let specificAlcohol = [];
   if (req.query.alcohol) {    
-    let specificAlcohol = cocktails.filter(drink => {
-      return drink.contains.indexOf(req.query.alcohol) > -1;
+    specificAlcohol = cocktails.filter(drink => {
+      drink.contains.includes(req.query.alcohol);
+      console.log(specificAlcohol)
     });
-    console.log(specificAlcohol)
+    
     res.render('home', {
       cocktails: specificAlcohol,
       alcoholList,
