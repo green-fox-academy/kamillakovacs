@@ -3,33 +3,46 @@ body {
   width: auto;
 }
 
+h1 {
+  text-align: center;
+}
+
 .middle {
   display: flex;
   justify-content: center;
   align-content: center;
-  flex-direction: row;
   flex-wrap: wrap;
   position: relative;
+  flex-basis: auto;
 }
 
 .picture {
-  height: 23%;
-  width: 50%;
+  height: 43%;
+  width: 80%;
   min-width: 160px;
   min-height: 90px;
 }
 
 .footer {
   background-color: white;
-  opacity: .4;
+  background: rgba(255, 255, 255, 0.85);
   position: absolute;
   bottom: 0px;
-  height: 25%;
-  width: 50%;
+  height: 115px;
+  width: 80%;
 }
 
-h2, p {
+.name {
   margin-left: 5px;
+  font-size: 20px;
+  color: rgb(0, 0, 0); 
+  line-height: 70%;
+}
+
+.quote {
+  margin-left: 5px;
+  color: rgb(0, 0, 0); 
+  margin-bottom: 3px;
 }
 
 .buttonright {
