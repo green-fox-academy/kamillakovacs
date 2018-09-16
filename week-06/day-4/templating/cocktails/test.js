@@ -1,9 +1,3 @@
-'use strict'
-
-const express = require('express');
-const app = express();
-const PORT = 3000;
-
 const cocktails = [
   { name: 'GIN FIZZ', price: 1520, contains: ['gin', 'sugar', 'lemon juice', 'soda'], isAlcoholic: true },
   { name: 'BLOODY MARY', price: 1650, contains: ['vodka', 'tomato juice', 'spices'], isAlcoholic: true },
@@ -15,29 +9,7 @@ const cocktails = [
   { name: 'SAFE SEX ON THE BEACH', price: 990, contains: ['peach schnapps', 'orange juice', 'cranberry juice'], isAlcoholic: false },
 ];
 
-const alcoholList = ['gin', 'vodka', 'rum', 'tequila'];
-
-app.set('view engine', 'ejs');
-app.use('/assets', express.static('assets'));
-
-app.get('/', (req, res) => {
-  if (req.query.alcohol) {    
-    let specificAlcohol = cocktails.filter(drink => {
-      return drink.contains.includes(req.query.alcohol);
-    });
-    res.render('home', {
-      cocktails: specificAlcohol,
-      alcoholList,
-    });
-
-  } else {
-    res.render('home', {
-      cocktails,
-      alcoholList,
-    });
-  }
-});
-
-app.listen(PORT, () => {
-  console.log(`The server is up and running on port ${PORT}`);
-});
+let drinkList = cocktails.filter(drink => {
+    return drink.contains.contains(req.query.alcoholType);
+  });
+  console.log(drinkList)

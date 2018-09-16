@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Cocktails Menu</title>
+  <link type="text/css" rel="stylesheet" href="/assets/style.css"/>
 </head>
+
 <body>
-  <h1>Cocktails</h1>
-  <ul>
+  <h1>Cocktail Menu</h1>
+  <br />
+  <div class="alcoholList">
+    <div class="alcohol all">ALL</div>
+    <div class="alcohol gin">GIN</div>
+    <div class="alcohol vodka">VODKA</div>
+    <div class="alcohol rum">RUM</div>
+    <div class="alcohol tequila">TEQUILA</div>
+  </div>
+
+  <table class="table">
+    <tr>
+      <th id="name">NAME</th>
+      <th id="price">PRICE</th>
+    </tr>
     <% cocktails.forEach(elem => { %>
-      <li> <%= elem.name %> </li>      
-    <% }) %>
-  </ul>
+      <tr class="maincontent">
+        <td class="cocktailList">
+          <div class="cocktailName"><%= elem.name %><% if (!elem['isAlcoholic']) {%>
+          (non-alcoholic)<% } %>
+          </div>
+          <div class="ingredient"><%= elem.contains + ' ' %></div>
+        </td>
+        <td class="pricelist"><%= elem.price %> Ft</td>
+        <% }) %>
+      </tr>
+  </table>
 </body>
+
 </html>
