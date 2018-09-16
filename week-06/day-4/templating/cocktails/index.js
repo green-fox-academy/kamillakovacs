@@ -23,8 +23,9 @@ app.use('/assets', express.static('assets'));
 app.get('/', (req, res) => {
   if (req.query.alcohol) {    
     let specificAlcohol = cocktails.filter(drink => {
-      return drink.contains.includes(req.query.alcohol);
+      return drink.contains.indexOf(req.query.alcohol) > -1;
     });
+    console.log(specificAlcohol)
     res.render('home', {
       cocktails: specificAlcohol,
       alcoholList,
