@@ -24,10 +24,8 @@ app.get('/', (req, res) => {
   let specificAlcohol = [];
   if (req.query.alcohol) {    
     specificAlcohol = cocktails.filter(drink => {
-      drink.contains.includes(req.query.alcohol);
-      console.log(specificAlcohol)
+      return drink.contains.includes(req.query.alcohol);
     });
-    
     res.render('home', {
       cocktails: specificAlcohol,
       alcoholList,
