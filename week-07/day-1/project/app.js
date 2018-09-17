@@ -12,7 +12,11 @@ app.get('/', (req, res) => {
 });
 
 app.get('/doubling', (res, req) => {
-
+  res.json({ 
+    received: res, 
+    result: res * 2,
+  });
+  res.statusCode(500).json({ error: "Please provide an input!"})
 });
 
 app.listen(PORT, () => {
