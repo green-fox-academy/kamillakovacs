@@ -1,7 +1,8 @@
 {
-  "name": "day-1",
+  "name": "arrayhandler",
   "version": "1.0.0",
-  "main": "app.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -9,9 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^2.6.1",
     "express": "^4.16.3"
-  },
-  "devDependencies": {},
-  "description": ""
+  }
 }
