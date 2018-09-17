@@ -9,6 +9,6 @@ function countDown(n: number) {
 }
 
 let answer: number;
-answer = countDown(20);
+answer = countDown(7);
 
 console.log(answer);

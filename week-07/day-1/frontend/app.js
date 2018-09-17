@@ -39,9 +39,51 @@ app.get('/greeter/', (req, res) => {
   }
 });
 
-app.get('/appenda/{appendable}', (req, res) => {
-  
-})
+app.get('/appenda/:word', (req, res) => {
+  let appendableText = req.params.word;
+  if (req.params.word) {
+    res.json({
+      appended: `${appendableText}a`,
+    });
+  } else {
+    res.status(404).json({
+      error: `Please provide a word to append silly person.`
+    });
+  };
+});
+
+function refactorio(n) {
+  if (n === 1) {
+    return 1;
+   } else {
+    return n * refactorio(n - 1);
+   }
+}
+
+function countDown(x) {
+  if (x < 1) {
+    throw new Error("Cannot use negative numbers");
+  } else if (x === 1) {
+    return 1;
+  } else {
+    return x + countDown(x - 1);
+  };
+};
+
+app.post('/dountil/:action', jsonParser, (req, res) => {
+  let inputNumber = req.body.until;
+  if (req.params.action === `sum`) {
+    res.json({
+      result: countDown(inputNumber),
+    });
+  } else if (req.params.action === `factor`) {
+    res.json({
+      result: refactorio(inputNumber),
+    });
+  } else {
+    res.json({ error: "Please provide a number!" });
+  };
+});
 
 app.listen(PORT, () => {
   console.log(`The server is up and running on port ${PORT}`);
