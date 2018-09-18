@@ -8,11 +8,15 @@ const fetch = require('node-fetch');
 
 app.use('/assets', express.static('assets'));
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+})
+
 app.get('/api/giphy/', (req, res) => {
   let url = [
     'https://api.giphy.com/v1/gifs/search',
     `?api_key=8zlJLJgPG8RMMWFNtllRrrWTFEBktjh0`,
-    `&q=kittens&limit=16`,
+    `&q=kittens`,
   ].join('');
 
   fetch(url)
