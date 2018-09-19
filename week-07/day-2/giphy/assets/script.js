@@ -7,10 +7,14 @@ window.onload = () => {
   
   http.onload = () => {
     if (http.status === 200) {
+      
+      
+      
       const giphyImages = JSON.parse(http.response).data;
       console.log(giphyImages)
       giphyImages.forEach((elem) => {
         const newGif = document.createElement('img');
+        newGif.classList.add('');
         giphyParent.appendChild(newGif);
         newGif.setAttribute('src', elem.images.downsized_medium.url)
         
