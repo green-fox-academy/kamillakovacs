@@ -1,7 +1,7 @@
 window.onload = () => {
   const host = 'http://localhost:3000/api';
   const http = new XMLHttpRequest();
-  const bookstore = document.querySelector('#books');
+  const bookstore = document.querySelector('#book-list');
   http.open('GET', `${host}/booknames/`, true);
   console.log(http);
   
@@ -24,12 +24,12 @@ window.onload = () => {
         newTR.appendChild(newBookPrice);
   
         bookstore.appendChild(newTR);
-        
+
         newBookName.innerText = bookName.book_name;
         newBookAuthor.innerText = bookName.aut_name;
         newBookCat.innerText = bookName.cate_descrip;
         newBookPub.innerText = bookName.pub_name;
-        newBookPrice.innerText = bookName.book_price;
+        newBookPrice.innerText = `$ ${bookName.book_price}`;
       }); 
     }
   }
