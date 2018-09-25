@@ -16,7 +16,7 @@ app.get('/api/giphy/', (req, res) => {
   let url = [
     'https://api.giphy.com/v1/gifs/search',
     `?api_key=8zlJLJgPG8RMMWFNtllRrrWTFEBktjh0`,
-    `&q=kittens`,
+    `&q=kitten&limit:16`,
   ].join('');
 
   fetch(url)
