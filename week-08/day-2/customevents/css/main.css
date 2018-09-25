@@ -1,0 +1,17 @@
+body {
+  height: 400px;
+  width: 400px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  height: 400px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
