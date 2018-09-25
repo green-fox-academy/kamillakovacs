@@ -4,7 +4,7 @@ window.onload = () => {
   const mainContent = document.querySelector('#container');
   
   const getRandomDiv = () => {
-    return Math.floor(Math.random() * 15);
+    return Math.floor(Math.random() * 25);
   }
 
   const getRandomColor = () => {
@@ -17,7 +17,7 @@ window.onload = () => {
 
   const scrollThreshold = 300;
 
-  const createDiv = () => {
+  const createBottomDiv = () => {
     for (let i = 0; i < getRandomDiv(); i++) {
       let newDiv = document.createElement('div');
       mainContent.appendChild(newDiv);
@@ -26,13 +26,29 @@ window.onload = () => {
     };
   };
 
-  createDiv();
+  const createTopDiv = () => {
+    for (let i = 0; i < getRandomDiv(); i++) {
+      let newDiv = document.createElement('div');
+      mainContent.insertBefore(newDiv, mainContent.firstChild);
+      newDiv.classList.add('item');
+      newDiv.style.backgroundColor = getThisColor();
+    };
+  };
+
+  createBottomDiv();
   
   document.addEventListener('scroll', () => {
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight - scrollThreshold) {
-      createDiv();
+      createBottomDiv();
     }
   })
+
+  document.addEventListener('scroll', () => {
+    if (window.innerHeight + window.scrollY <= scrollThreshold) {
+      createTopDiv();
+    }
+  })
+
 };
 
 
