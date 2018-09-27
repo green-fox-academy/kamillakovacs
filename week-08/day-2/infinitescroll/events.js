@@ -39,6 +39,9 @@ window.onload = () => {
   
   document.addEventListener('scroll', () => {
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight - scrollThreshold) {
+      console.log(window.innerHeight)
+      console.log(window.scrollY)
+      console.log(document.body.offsetHeight)
       createBottomDiv();
     }
   })
