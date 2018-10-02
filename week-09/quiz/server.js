@@ -26,30 +26,40 @@ app.get('/', function(request, response) {
 });
 
 app.get('/game', (req, res) => {
-  let randomNumber = Math.floor(Math.random() * 10);
-  conn.query(`SELECT * from answers WHERE id=${randomNumber};`, (err, result) => {
-    
+  let randomNumber = Math.ceil(Math.random() * 10);
+  conn.query(`SELECT questions.id, question_id, answer, is_correct, question FROM answers INNER JOIN questions ON answers.question_id = questions.id where questions.id=${randomNumber};`, (err, result) => {
     if (err) {
       res.status(400).json({
         error: 'Unexpected error',
     })
     } else {
       console.log(result)
+      let theAnswers = [];
+      result.forEach(elem => {
+        theAnswers.push(elem)
+      })
+      console.log(theAnswers)
+
       res.status(200).json({
-        question_id: result[0].question_id,
         id: result[0].id,
-        answer: result[0].answer,
-        is_correct: result[0].is_correct,
+        question: result[0].question,
+        answers: theAnswers,
       })
     }
   })
 })
 
 app.get('/questions', (req, res) => {
-
+  conn.query(`SELECT * FROM questions;`, (err, result) => {
+    if (err) {
+      res.status(400).json({
+        error: 'Unexpected error',
+    })
+    } else {
+      res.status(200).json({result})
+    }
+  })
 })
-
-
 
 app.listen(PORT, () => {
   console.log(`App is up and running on port ${PORT}`);
