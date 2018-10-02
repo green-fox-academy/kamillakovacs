@@ -3,12 +3,15 @@
 window.onload = () => {
   const thisButton = document.querySelector('button');
   const url = 'http://localhost:3000/api/joke';
+  const div = document.querySelector('div');
 
-  thisButton.addEventListener('click', (event) => {
+  thisButton.addEventListener('click', () => {
     fetch(url)
     .then( res => res.json())
     .then( resp => {
-      document.querySelector('p').innerHTML = resp.value.joke;
+      let thisP = document.createElement('p')
+      div.appendChild(thisP)
+      thisP.innerHTML = resp.value.joke
     } )
   })
 }
