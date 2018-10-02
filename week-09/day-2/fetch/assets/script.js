@@ -9,9 +9,9 @@ window.onload = () => {
     fetch(url)
     .then( res => res.json())
     .then( resp => {
-      let thisP = document.createElement('p')
-      div.appendChild(thisP)
-      thisP.innerHTML = resp.value.joke
+      let thisP = document.createElement('p');
+      div.appendChild(thisP);
+      thisP.innerHTML = resp.value.joke;
     } )
   })
 }
