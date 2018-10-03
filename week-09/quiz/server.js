@@ -25,8 +25,10 @@ app.get('/', function(request, response) {
   response.sendFile(path.join(__dirname, 'index.html'));
 });
 
+let multiplier = 10;
+
 app.get('/game', (req, res) => {
-  let randomNumber = Math.ceil(Math.random() * 10);
+  let randomNumber = Math.ceil(Math.random() * multiplier);
   conn.query(`SELECT questions.id, question_id, answer, is_correct, question FROM answers INNER JOIN questions ON answers.question_id = questions.id where questions.id=${randomNumber};`, (err, result) => {
     if (err) {
       res.status(400).json({
@@ -90,6 +92,7 @@ app.post('/questions', (req, res) => {
             return;
           } 
           res.redirect('/');
+          multiplier++;
         })
       })
     })
