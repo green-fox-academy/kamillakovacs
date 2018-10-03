@@ -39,7 +39,6 @@ app.get('/game', (req, res) => {
       result.forEach(elem => {
         theAnswers.push(elem)
       })
-      console.log(theAnswers)
       res.status(200).json({
         id: result[0].id,
         question: result[0].question,

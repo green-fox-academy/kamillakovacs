@@ -22,19 +22,11 @@ window.onload = () => {
   fetch(url)
     .then( res => res.json())
     .then( resp => {
-      console.log(resp);
-      let i = 1;
-      answer1.textContent = resp.answers[0].answer;
-      answer2.textContent = resp.answers[1].answer;
-      answer3.textContent = resp.answers[2].answer;
-      answer4.textContent = resp.answers[3].answer;
-        
       thisQuestion.textContent = resp.question;
       answer1.textContent = resp.answers[0].answer;
       answer2.textContent = resp.answers[1].answer;
       answer3.textContent = resp.answers[2].answer;
       answer4.textContent = resp.answers[3].answer;
-      i++;
     })
   }, 10000);
 }
