@@ -4,6 +4,7 @@ window.onload = () => {
   const mainDiv = document.querySelector('.manage')
   const urlManage = "http://localhost:3000/questioning";
   const urlCreate = "http://localhost:3000/questions";
+  const form = document.querySelector('form');
 
   fetch(urlManage)
     .then( res => res.json())
@@ -23,5 +24,10 @@ window.onload = () => {
         deleteDiv.textContent = "Delete";
       }) 
     })
-
   }
+
+
+
+
+
+
