@@ -42,7 +42,6 @@ class DiceSet {
   }
 
   public reroll(): number[] {
-    let newDiceResults: number[] = [];
     let sixResult: number[] = [];
     do {
       for (let i = 1; i <= this.numberOfDice; i++) {
@@ -54,7 +53,7 @@ class DiceSet {
       }
     }
     while (this.numberOfDice > 0);
-    let finalList = sixResult.concat(this.finalDice)
+    let finalList: number[] = sixResult.concat(this.finalDice)
     return finalList;
   }
 }
